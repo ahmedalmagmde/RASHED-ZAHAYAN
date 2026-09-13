@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راشد زهيان - مرشد سياحي معتمد | برامج عسير السياحية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            direction: rtl;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .package-card {
+            transition: all 0.3s ease;
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #000 0%, #333 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 24px;
+        }
+        .whatsapp-btn {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-slate-50 to-slate-100">
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <div class="flex items-center justify-between mb-4 flex-col lg:flex-row gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="logo-placeholder">RAZI</div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-800">راشد زهيان</h1>
+                        <p class="text-sm text-green-600 font-semibold">🏅 مرشد سياحي معتمد</p>
+                    </div>
+                </div>
+                <div class="text-center lg:text-right">
+                    <div class="flex items-center gap-2 justify-center lg:justify-end">
+                        <svg class="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3.5 4.5A.5.5 0 014 4h12a.5.5 0 01.5.5v11a.5.5 0 01-.5.5H4a.5.5 0 01-.5-.5v-11z"/>
+                        </svg>
+                        <span class="text-sm font-semibold text-gray-700">رخصة السياحة: 40005052</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t pt-4 text-center">
+                <p class="text-gray-700 text-lg font-semibold">
+                    ✨ برنامج سياحي متكامل في منطقة عسير 🏔️
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-4">استكشف جمال عسير معنا</h2>
+            <p class="text-xl mb-8 opacity-90">برامج سياحية متنوعة وفريق متخصص لتجربة لا تُنسى</p>
+            <a href="https://wa.me/966555756546?text=مرحباً، أنا مهتم بحجز باقة سياحية. هل يمكنك تزويدي بالمزيد من المعلومات؟" 
+               target="_blank" 
+               class="whatsapp-btn inline-flex items-center gap-3 bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-50 transition-colors shadow-lg">
+                📱 اتصل بنا عبر WhatsApp الآن
+            </a>
+            <p class="text-sm mt-4 opacity-75">☎️ 0555756546</p>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">الباقات السياحية</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Package 1 -->
+            <div class="package-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                <div class="bg-gradient-to-r from-amber-500 to-amber-600 text-white p-6">
+                    <h3 class="text-2xl font-bold mb-2">برنامج عسير الأسبوعي</h3>
+                    <div class="flex items-center gap-2 text-sm opacity-90">
+                        📅 7 أيام - 6 ليالٍ
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">برنامج سياحي شامل يغطي أجمل مناطق عسير</p>
+                    
+                    <h4 class="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        📍 المناطق المشمولة
+                    </h4>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">أبها</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">رجال ألمع</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">تنومة</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">النماص</span>
+                    </div>
+
+                    <h4 class="font-semibold text-gray-800 mb-3">المميزات:</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>زيارة معالم أبها التاريخية</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>مزارع الفراولة والعنب</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>منتزهات وطبيعة خلابة</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>قرى تراثية وحصون تاريخية</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>أنشطة ترفيهية متنوعة</span>
+                        </li>
+                    </ul>
+
+                    <div class="border-t pt-4 mb-4">
+                        <p class="text-gray-600 text-sm font-semibold">💬 يرجى التواصل للاستفسار عن الأسعار</p>
+                    </div>
+
+                    <a href="https://wa.me/966555756546?text=مرحباً، أنا مهتم بحجز برنامج عسير الأسبوعي. هل يمكنك تزويدي بالمزيد من المعلومات والأسعار؟" 
+                       target="_blank"
+                       class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 rounded-lg font-bold hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        💬 احجز الآن
+                    </a>
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="package-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6">
+                    <h3 class="text-2xl font-bold mb-2">جولة ثنائية الأيام</h3>
+                    <div class="flex items-center gap-2 text-sm opacity-90">
+                        📅 2 يوم - ليلة واحدة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">جولة سريعة لاستكشاف أهم المعالم</p>
+                    
+                    <h4 class="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        📍 المناطق المشمولة
+                    </h4>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">أبها</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">الغابات</span>
+                    </div>
+
+                    <h4 class="font-semibold text-gray-800 mb-3">المميزات:</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>جولة مدينة أبها الشاملة</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>المنتزهات والحدائق الجميلة</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>الطعام التقليدي الشهي</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>التسوق والترفيه</span>
+                        </li>
+                    </ul>
+
+                    <div class="border-t pt-4 mb-4">
+                        <p class="text-gray-600 text-sm font-semibold">💬 يرجى التواصل للاستفسار عن الأسعار</p>
+                    </div>
+
+                    <a href="https://wa.me/966555756546?text=مرحباً، أنا مهتم بحجز جولة ثنائية الأيام. هل يمكنك تزويدي بالمزيد من المعلومات والأسعار؟" 
+                       target="_blank"
+                       class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 rounded-lg font-bold hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        💬 احجز الآن
+                    </a>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="package-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl">
+                <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6">
+                    <h3 class="text-2xl font-bold mb-2">جولة القرى التراثية</h3>
+                    <div class="flex items-center gap-2 text-sm opacity-90">
+                        📅 3 أيام - يومين ليلة
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">استكشاف القرى التراثية والحصون</p>
+                    
+                    <h4 class="font-semibold text-gray-800 mb-3 flex items-center gap-2">
+                        📍 المناطق المشمولة
+                    </h4>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">رجال ألمع</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">تنومة</span>
+                        <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">النماص</span>
+                    </div>
+
+                    <h4 class="font-semibold text-gray-800 mb-3">المميزات:</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>القرى التراثية الأصيلة</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>الحصون والقلاع التاريخية</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>الفنون والحرف اليدوية</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <span>الطبيعة الجبلية الخلابة</span>
+                        </li>
+                    </ul>
+
+                    <div class="border-t pt-4 mb-4">
+                        <p class="text-gray-600 text-sm font-semibold">💬 يرجى التواصل للاستفسار عن الأسعار</p>
+                    </div>
+
+                    <a href="https://wa.me/966555756546?text=مرحباً، أنا مهتم بحجز جولة القرى التراثية. هل يمكنك تزويدي بالمزيد من المعلومات والأسعار؟" 
+                       target="_blank"
+                       class="w-full bg-gradient-to-r from-green-600 to-green-700 text-white py-3 rounded-lg font-bold hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        💬 احجز الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Itinerary -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">نموذج من البرنامج اليومي</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Day 1 -->
+                <div class="border-r-4 border-green-600 pr-6 bg-green-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">📅 اليوم الأول - الأحد</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold text-lg">→</span>
+                            <span class="text-gray-700">✈️ الوصول واستقبال الضيوف</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold text-lg">→</span>
+                            <span class="text-gray-700">🏛️ زيارة معالم مدينة أبها</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold text-lg">→</span>
+                            <span class="text-gray-700">🏰 قلعة شمسان والمدينة العالية</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold text-lg">→</span>
+                            <span class="text-gray-700">🍽️ عشاء في أحد المطاعم التقليدية</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="border-r-4 border-amber-600 pr-6 bg-amber-50 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold text-amber-600 mb-4">📅 اليوم الثاني - الاثنين</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-600 font-bold text-lg">→</span>
+                            <span class="text-gray-700">🍓 زيارة مزارع الفراولة والعنب</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-600 font-bold text-lg">→</span>
+                            <span class="text-gray-700">☁️ منتزه السحاب للغداء</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-600 font-bold text-lg">→</span>
+                            <span class="text-gray-700">🚡 تلفريك أبها وممشى الضباب</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-amber-600 font-bold text-lg">→</span>
+                            <span class="text-gray-700">🎭 أنشطة ترفيهية مسائية</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                <h3 class="text-xl font-bold text-blue-600 mb-3">📌 برنامج كامل يتضمن:</h3>
+                <ul class="grid md:grid-cols-2 gap-3">
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✓</span>
+                        <span>7 أيام من الاستكشاف والمتعة</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✓</span>
+                        <span>6 ليالٍ إقامة مريحة</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✓</span>
+                        <span>وجبات غذائية متنوعة</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✓</span>
+                        <span>نقل وتنقل آمن</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✓</span>
+                        <span>مرشد سياحي محترف</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✓</span>
+                        <span>تذاكر الدخول للمواقع</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">تواصل معنا</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4 bg-gray-800 p-6 rounded-lg">
+                        <span class="text-4xl">💬</span>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">WhatsApp</h3>
+                            <a href="https://wa.me/966555756546" 
+                               target="_blank"
+                               class="text-green-400 hover:text-green-300 text-2xl font-bold block">
+                                0555756546
+                            </a>
+                            <p class="text-gray-300 text-sm mt-2">الطريقة الأسرع للتواصل معنا</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 bg-gray-800 p-6 rounded-lg">
+                        <span class="text-4xl">📱</span>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">الهاتف</h3>
+                            <p class="text-gray-300 text-xl font-bold">0555756546</p>
+                            <p class="text-gray-300 text-sm mt-2">متاح طوال الأيام</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 bg-gray-800 p-6 rounded-lg">
+                        <span class="text-4xl">📍</span>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3">الموقع</h3>
+                            <p class="text-gray-300">منطقة عسير</p>
+                            <p class="text-gray-300">المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose Us -->
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-6">🌟 لماذا تختارنا؟</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-400 font-bold text-xl">✓</span>
+                            <span class="text-gray-300">مرشد سياحي معتمد بخبرة طويلة</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-400 font-bold text-xl">✓</span>
+                            <span class="text-gray-300">برامج مرنة قابلة للتخصيص</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-400 font-bold text-xl">✓</span>
+                            <span class="text-gray-300">أسعار منافسة وعروض خاصة</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-400 font-bold text-xl">✓</span>
+                            <span class="text-gray-300">رعاية فائقة واهتمام بالتفاصيل</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-400 font-bold text-xl">✓</span>
+                            <span class="text-gray-300">معرفة عميقة بمنطقة عسير</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-400 font-bold text-xl">✓</span>
+                            <span class="text-gray-300">عروض خاصة للمجموعات</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Large CTA Button -->
+            <div class="text-center">
+                <a href="https://wa.me/966555756546?text=مرحباً، أنا مهتم بحجز برنامج سياحي. هل يمكنك تزويدي بالمزيد من المعلومات؟" 
+                   target="_blank"
+                   class="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-12 py-6 rounded-lg font-bold text-2xl transition-all shadow-2xl">
+                    🎉 احجز برنامجك السياحي الآن
+                </a>
+                <p class="text-gray-300 text-lg mt-6">📞 الاتصال المباشر: <span class="font-bold text-green-400">0555756546</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-3 font-semibold text-lg">© 2024 راشد زهيان - مرشد سياحي معتمد</p>
+            <p class="text-sm mb-3">🏅 رخصة السياحة: 40005052</p>
+            <p class="text-xs text-gray-500">
+                جميع الحقوق محفوظة | الاختصاص: منطقة عسير والمناطق المحيطة
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
