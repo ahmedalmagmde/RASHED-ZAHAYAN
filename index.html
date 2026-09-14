@@ -670,7 +670,7 @@
     <nav class="navbar">
         <div class="navbar-content">
             <div class="navbar-logo">
-                <span>✨</span>
+                <img src="./logo.png" alt="شعار راشد زهيان" style="width: 50px; height: 50px; object-fit: contain; border-radius: 8px;" onerror="this.style.display='none';">
                 <span>راشد زهيان</span>
             </div>
             <ul class="navbar-links">
@@ -684,6 +684,15 @@
 
     <!-- Hero Section 1 -->
     <section id="home" class="hero-immersive">
+        <!-- Video Background -->
+        <video id="hero-video" autoplay loop muted playsinline preload="auto"
+               poster="./video-poster.jpg"
+               class="absolute inset-0 w-full h-full object-cover z-0 opacity-80 pointer-events-none"
+               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.8; z-index: 0; pointer-events: none;">
+            <source src="./video.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+
         <div class="hero-content">
             <span data-aos="fade-down" data-aos-delay="100" style="color: #60a5fa; font-size: 0.95rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">استكشف الجمال الحقيقي</span>
             <h1 data-aos="fade-up" data-aos-delay="200">
@@ -933,9 +942,15 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>عن راشد زهيان</h4>
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <img src="./logo.png" alt="شعار راشد زهيان" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;" onerror="this.style.display='none';">
+                    <div>
+                        <h3 style="color: white; font-weight: 800; font-size: 1.3rem;">راشد زهيان</h3>
+                        <p style="color: #60a5fa; font-size: 0.85rem;">مرشد سياحي معتمد</p>
+                    </div>
+                </div>
                 <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; line-height: 1.6;">
-                    مرشد سياحي معتمد متخصص في تقديم تجارب سياحية فريدة وآمنة في منطقة عسير الجميلة بخبرة أكثر من 15 سنة.
+                    متخصص في تقديم تجارب سياحية فريدة وآمنة في منطقة عسير الجميلة بخبرة أكثر من 15 سنة.
                 </p>
             </div>
             <div class="footer-section">
@@ -971,6 +986,35 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Video autoplay setup
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('hero-video');
+
+            if (video) {
+                video.muted = true;
+                video.defaultMuted = true;
+                video.setAttribute('muted', '');
+
+                const playVideo = () => {
+                    const promise = video.play();
+                    if (promise) {
+                        promise.catch(() => {});
+                    }
+                };
+
+                video.addEventListener('canplay', playVideo, { once: true });
+                playVideo();
+
+                ['click', 'touchstart', 'pointerdown'].forEach(eventName => {
+                    document.addEventListener(eventName, playVideo, { once: true, passive: true });
+                });
+
+                video.addEventListener('error', function() {
+                    console.warn('تعذر تحميل video.mp4. تأكد من وجود الملف في نفس مجلد index.html.');
+                });
+            }
+        });
+
         AOS.init({
             duration: 1000,
             easing: 'ease-out-cubic',
