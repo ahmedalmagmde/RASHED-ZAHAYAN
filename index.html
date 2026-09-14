@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>راشد زهيان - مرشد سياحي معتمد | عسير الخيال</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -770,7 +769,6 @@
         <!-- Video Background -->
         <video id="hero-video" autoplay loop muted playsinline preload="auto"
                poster="./video-poster.jpg"
-               class="absolute inset-0 w-full h-full object-cover z-0 opacity-80 pointer-events-none"
                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.8; z-index: 0; pointer-events: none;">
             <source src="./video.mp4" type="video/mp4">
             متصفحك لا يدعم تشغيل الفيديو.
@@ -803,7 +801,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="section-light" style="padding: 100px 40px;">
+    <section id="services" class="section-light" style="padding: 100px 40px;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <div data-aos="fade-down" style="text-align: center; margin-bottom: 80px;">
                 <span style="color: #3b82f6; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;">خدماتنا المميزة</span>
@@ -1011,15 +1009,15 @@
                 <form style="display: flex; flex-direction: column; gap: 20px;">
                     <div>
                         <label style="display: block; margin-bottom: 8px; font-weight: 600;">الاسم</label>
-                        <input type="text" placeholder="أدخل اسمك" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: white; font-family: Cairo;">
+                        <input id="userName" type="text" placeholder="أدخل اسمك" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: white; font-family: Cairo;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 8px; font-weight: 600;">الهاتف</label>
-                        <input type="tel" placeholder="رقم الهاتف" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: white; font-family: Cairo;">
+                        <input id="userPhone" type="tel" placeholder="رقم الهاتف" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: white; font-family: Cairo;">
                     </div>
                     <div>
                         <label style="display: block; margin-bottom: 8px; font-weight: 600;">نوع الرحلة</label>
-                        <select style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: white; font-family: Cairo;">
+                        <select id="tripType" style="width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.05); color: white; font-family: Cairo;">
                             <option style="color: #000;">رحلة يوم</option>
                             <option style="color: #000;">رحلة 3 أيام</option>
                             <option style="color: #000;">رحلة 5 أيام</option>
@@ -1027,7 +1025,7 @@
                             <option style="color: #000;">برنامج مخصص</option>
                         </select>
                     </div>
-                    <a href="https://wa.me/966555756546?text=أنا مهتم بحجز رحلة" class="btn-luxury btn-primary" style="width: 100%; text-align: center;">إرسال الطلب</a>
+                    <button type="button" onclick="sendToWhatsApp()" class="btn-luxury btn-primary" style="width: 100%; text-align: center; border: none; font-family: Cairo;">إرسال الطلب</button>
                 </form>
             </div>
         </div>
@@ -1149,6 +1147,23 @@
         });
 
         navbar.style.transition = 'opacity 0.3s ease-out';
+
+        // دالة الإرسال إلى واتساب
+        function sendToWhatsApp() {
+            const name = document.getElementById('userName').value;
+            const phone = document.getElementById('userPhone').value;
+            const type = document.getElementById('tripType').value;
+            
+            if(!name || !phone) {
+                alert('يرجى تعبئة الاسم ورقم الهاتف لإرسال الطلب');
+                return;
+            }
+
+            const text = `مرحباً، أرغب بحجز رحلة:\nالاسم: ${name}\nرقم التواصل: ${phone}\nنوع الرحلة: ${type}`;
+            const encodedText = encodeURIComponent(text);
+            
+            window.open(`https://wa.me/966555756546?text=${encodedText}`, '_blank');
+        }
     </script>
 </body>
 </html>
