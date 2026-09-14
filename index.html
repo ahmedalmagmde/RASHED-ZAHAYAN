@@ -161,6 +161,20 @@
             }
         }
 
+        @keyframes priceShine {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .price-card.featured {
+            animation: priceShine 3s linear infinite;
+            background-size: 200% 100%;
+        }
+
         .scroll-indicator svg {
             width: 30px;
             height: 30px;
@@ -218,6 +232,31 @@
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             transform: translateY(-3px);
+        }
+
+        /* Price card button animation */
+        .price-card .btn-luxury {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-card .btn-luxury::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .price-card:hover .btn-luxury {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .price-card:hover .btn-luxury::after {
+            opacity: 1;
         }
 
         /* ========== SECTIONS ========== */
@@ -382,8 +421,15 @@
             border-radius: 20px;
             padding: 40px;
             position: relative;
-            transition: all 0.4s;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
+            cursor: pointer;
+        }
+
+        .price-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 30px 80px rgba(59, 130, 246, 0.25);
+            transform: translateY(-20px) scale(1.03);
         }
 
         .price-card.featured {
@@ -393,10 +439,10 @@
             box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);
         }
 
-        .price-card:hover {
-            border-color: #3b82f6;
-            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
-            transform: translateY(-10px);
+        .price-card.featured:hover {
+            transform: scale(1.08) translateY(-25px);
+            box-shadow: 0 40px 100px rgba(59, 130, 246, 0.35);
+            border-color: #2563eb;
         }
 
         .price-badge {
@@ -410,6 +456,13 @@
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .price-card:hover .price-badge {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
         }
 
         .price-amount {
@@ -417,17 +470,33 @@
             font-weight: 900;
             color: var(--primary);
             margin: 20px 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .price-card:hover .price-amount {
+            color: #3b82f6;
+            transform: scale(1.15);
         }
 
         .price-currency {
             font-size: 1.5rem;
             opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .price-card:hover .price-currency {
+            opacity: 1;
         }
 
         .price-period {
             color: #64748b;
             font-size: 0.95rem;
             margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+
+        .price-card:hover .price-period {
+            color: #3b82f6;
         }
 
         .price-features {
@@ -437,10 +506,25 @@
         }
 
         .price-features li {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #e2e8f0;
             color: #475569;
             font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .price-features li::before {
+            content: '✓ ';
+            color: #3b82f6;
+            font-weight: 700;
+            margin-left: 5px;
+        }
+
+        .price-card:hover .price-features li {
+            color: #1e293b;
+            transform: translateX(-8px);
+            border-color: rgba(59, 130, 246, 0.2);
         }
 
         /* ========== CONTACT SECTION ========== */
@@ -825,48 +909,66 @@
             <div class="price-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="price-badge">أساسي</div>
                 <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">رحلة يوم</h3>
-                <div class="price-amount"><span class="price-currency">ر.س</span> 70</div>
+                <div class="price-amount"><span class="price-currency">ر.س</span> 500</div>
                 <div class="price-period">لكل شخص</div>
                 <ul class="price-features">
-                    <li>✓ نقل فاخر مع سائق</li>
-                    <li>✓ مرشد سياحي متخصص</li>
-                    <li>✓ زيارة 3 مواقع رئيسية</li>
-                    <li>✓ غداء فاخر</li>
-                    <li>✓ مشروبات طوال اليوم</li>
+                    <li>نقل فاخر مع سائق محترف</li>
+                    <li>مرشد سياحي متخصص</li>
+                    <li>زيارة 3 مواقع رئيسية</li>
+                    <li>غداء فاخر</li>
+                    <li>مشروبات طوال اليوم</li>
                 </ul>
                 <a href="https://wa.me/966555756546?text=أنا مهتم برحلة اليوم" class="btn-luxury btn-primary" style="width: 100%; margin-top: 30px;">حجز الآن</a>
             </div>
 
-            <div class="price-card featured" data-aos="fade-up" data-aos-delay="150">
-                <div class="price-badge">الأفضل</div>
+            <div class="price-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="price-badge">متوسط</div>
                 <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">رحلة 3 أيام</h3>
-                <div class="price-amount"><span class="price-currency">ر.س</span> 200</div>
+                <div class="price-amount"><span class="price-currency">ر.س</span> 1,500</div>
                 <div class="price-period">لكل شخص</div>
                 <ul class="price-features">
-                    <li>✓ نقل فاخر مع سائق</li>
-                    <li>✓ مرشد متخصص خاص</li>
-                    <li>✓ زيارة 8+ مواقع</li>
-                    <li>✓ فندق 3 نجوم</li>
-                    <li>✓ جميع الوجبات</li>
-                    <li>✓ تأمين سفر</li>
+                    <li>نقل فاخر مع سائق متخصص</li>
+                    <li>مرشد متخصص خاص</li>
+                    <li>زيارة 8+ مواقع رائعة</li>
+                    <li>فندق 3 نجوم فاخر</li>
+                    <li>جميع الوجبات الشهية</li>
+                    <li>تأمين سفر شامل</li>
                 </ul>
                 <a href="https://wa.me/966555756546?text=أنا مهتم برحلة 3 أيام" class="btn-luxury btn-primary" style="width: 100%; margin-top: 30px;">حجز الآن</a>
             </div>
 
             <div class="price-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="price-badge">بريميوم</div>
+                <div class="price-badge">موسع</div>
                 <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">رحلة 5 أيام</h3>
-                <div class="price-amount"><span class="price-currency">ر.س</span> 350</div>
+                <div class="price-amount"><span class="price-currency">ر.س</span> 2,500</div>
                 <div class="price-period">لكل شخص</div>
                 <ul class="price-features">
-                    <li>✓ نقل بسيارة فاخرة</li>
-                    <li>✓ مرشد متخصص خاص</li>
-                    <li>✓ زيارة جميع المواقع</li>
-                    <li>✓ فندق 4 نجوم</li>
-                    <li>✓ جميع الوجبات الفاخرة</li>
-                    <li>✓ جلسات تصوير احترافية</li>
+                    <li>نقل بسيارة فاخرة جداً</li>
+                    <li>مرشد متخصص خاص مدرب</li>
+                    <li>زيارة جميع المواقع الرئيسية</li>
+                    <li>فندق 4 نجوم</li>
+                    <li>جميع الوجبات الفاخرة</li>
+                    <li>جلسات تصوير احترافية</li>
                 </ul>
                 <a href="https://wa.me/966555756546?text=أنا مهتم برحلة 5 أيام" class="btn-luxury btn-primary" style="width: 100%; margin-top: 30px;">حجز الآن</a>
+            </div>
+
+            <div class="price-card featured" data-aos="fade-up" data-aos-delay="250">
+                <div class="price-badge">الأفضل</div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">رحلة 10 أيام</h3>
+                <div class="price-amount"><span class="price-currency">ر.س</span> 5,000</div>
+                <div class="price-period">لكل شخص</div>
+                <ul class="price-features">
+                    <li>نقل بسيارة فاخرة من الدرجة الأولى</li>
+                    <li>مرشد متخصص خاص وسائق محترف</li>
+                    <li>زيارة 20+ موقع سياحي وأثري</li>
+                    <li>فندق 5 نجوم</li>
+                    <li>جميع الوجبات والعشاء الفاخر</li>
+                    <li>جلسات تصوير احترافية يومية</li>
+                    <li>تأمين سفر شامل</li>
+                    <li>حقيبة هدايا تذكارية</li>
+                </ul>
+                <a href="https://wa.me/966555756546?text=أنا مهتم برحلة 10 أيام" class="btn-luxury btn-primary" style="width: 100%; margin-top: 30px;">حجز الآن</a>
             </div>
         </div>
     </section>
@@ -980,7 +1082,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026  جميع الحقوق محفوظة</p>
+            <p>&copy; 2026 راشد زهيان - مرشد سياحي معتمد. جميع الحقوق محفوظة. | تصميم فخم وحديث</p>
         </div>
     </footer>
 
