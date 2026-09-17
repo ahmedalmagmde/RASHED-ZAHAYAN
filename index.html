@@ -992,49 +992,55 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
                 <!-- الصورة 1 -->
                 <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="./trip1.jpg" alt="رحلة الجبال" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px; display: block;" loading="lazy" decoding="async">
-                    <div class="gallery-overlay">
+                    <img src="./trip1.jpg" alt="رحلة الجبال" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px 16px 0 0; display: block;" loading="lazy" decoding="async">
+                    <div class="gallery-card-text">
                         <h3>🏔️ رحلة الجبال</h3>
+                        <p>استكشف قمم عسير الخضراء</p>
                     </div>
                 </div>
 
                 <!-- الصورة 2 -->
                 <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
-                    <img src="./trip2.jpg" alt="الجولة التاريخية" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px; display: block;" loading="lazy" decoding="async">
-                    <div class="gallery-overlay">
+                    <img src="./trip2.jpg" alt="الجولة التاريخية" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px 16px 0 0; display: block;" loading="lazy" decoding="async">
+                    <div class="gallery-card-text">
                         <h3>🏛️ الجولة التاريخية</h3>
+                        <p>عمق التراث والثقافة العريقة</p>
                     </div>
                 </div>
 
                 <!-- الصورة 3 -->
                 <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="./trip3.jpg" alt="رحلة الطبيعة" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px; display: block;" loading="lazy" decoding="async">
-                    <div class="gallery-overlay">
+                    <img src="./trip3.jpg" alt="رحلة الطبيعة" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px 16px 0 0; display: block;" loading="lazy" decoding="async">
+                    <div class="gallery-card-text">
                         <h3>🌿 رحلة الطبيعة</h3>
+                        <p>اغمر نفسك في أحضان الطبيعة</p>
                     </div>
                 </div>
 
                 <!-- الصورة 4 -->
                 <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
-                    <img src="./trip4.jpg" alt="تجارب الطعام" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px; display: block;" loading="lazy" decoding="async">
-                    <div class="gallery-overlay">
+                    <img src="./trip4.jpg" alt="تجارب الطعام" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px 16px 0 0; display: block;" loading="lazy" decoding="async">
+                    <div class="gallery-card-text">
                         <h3>🍽️ تجارب الطعام</h3>
+                        <p>تذوق أطباق محلية فريدة</p>
                     </div>
                 </div>
 
                 <!-- الصورة 5 -->
                 <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-                    <img src="./trip5.jpg" alt="الغروب الجميل" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px; display: block;" loading="lazy" decoding="async">
-                    <div class="gallery-overlay">
+                    <img src="./trip5.jpg" alt="الغروب الجميل" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px 16px 0 0; display: block;" loading="lazy" decoding="async">
+                    <div class="gallery-card-text">
                         <h3>🌅 الغروب الجميل</h3>
+                        <p>لحظات سحرية من الطبيعة</p>
                     </div>
                 </div>
 
                 <!-- الصورة 6 -->
                 <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
-                    <img src="./trip6.jpg" alt="لحظات لا تُنسى" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px; display: block;" loading="lazy" decoding="async">
-                    <div class="gallery-overlay">
+                    <img src="./trip6.jpg" alt="لحظات لا تُنسى" style="width: 100%; height: 300px; object-fit: cover; border-radius: 16px 16px 0 0; display: block;" loading="lazy" decoding="async">
+                    <div class="gallery-card-text">
                         <h3>✨ لحظات لا تُنسى</h3>
+                        <p>اصنع ذكريات تخلد مدى الحياة</p>
                     </div>
                 </div>
             </div>
@@ -1045,59 +1051,136 @@
                 position: relative;
                 overflow: hidden;
                 border-radius: 16px;
-                cursor: pointer;
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
             }
 
             .gallery-item:hover {
-                transform: translateY(-20px) scale(1.02);
-                box-shadow: 0 30px 80px rgba(59, 130, 246, 0.4);
-            }
-
-            .gallery-item:hover img {
-                transform: scale(1.12) rotate(2deg);
-                filter: brightness(0.7);
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
             }
 
             .gallery-item img {
-                transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                transition: all 0.4s ease;
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
+                display: block;
             }
 
-            .gallery-overlay {
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(30, 41, 59, 0.9));
+            .gallery-item:hover img {
+                transform: scale(1.05);
+                filter: brightness(0.9);
+            }
+            
+            @media (max-width: 768px) {
+                .gallery-item img {
+                    height: 200px;
+                }
+            }
+
+            /* ========== GALLERY CARDS ========== */
+            .gallery-card {
+                position: relative;
+                height: 300px;
+                border-radius: 16px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                opacity: 0;
-                transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                border-radius: 16px;
-            }
-
-            .gallery-item:hover .gallery-overlay {
-                opacity: 1;
-            }
-
-            .gallery-overlay h3 {
-                color: white;
-                font-size: 1.5rem;
-                font-weight: 700;
+                flex-direction: column;
                 text-align: center;
-                letter-spacing: 1px;
+                color: white;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+                overflow: hidden;
+                cursor: pointer;
+                box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+            }
+
+            .gallery-card::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+                pointer-events: none;
+            }
+
+            .gallery-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(59, 130, 246, 0.35);
+            }
+
+            .gallery-card h3 {
+                font-size: clamp(1.3rem, 4vw, 1.8rem);
+                font-weight: 800;
+                margin-bottom: 15px;
+                position: relative;
+                z-index: 1;
+                letter-spacing: 0.5px;
+            }
+
+            .gallery-card p {
+                font-size: clamp(0.9rem, 3vw, 1rem);
+                color: rgba(255, 255, 255, 0.85);
+                line-height: 1.6;
+                position: relative;
+                z-index: 1;
+                max-width: 90%;
+            }
+
+            /* النص تحت الصور */
+            .gallery-card-text {
+                background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+                padding: 20px 16px;
+                border-radius: 0 0 16px 16px;
+                text-align: center;
+                border-top: 2px solid rgba(59, 130, 246, 0.2);
+                transition: all 0.3s ease;
+            }
+
+            .gallery-card-text h3 {
+                font-size: clamp(1.1rem, 3vw, 1.4rem);
+                font-weight: 800;
+                color: white;
+                margin-bottom: 8px;
+                letter-spacing: 0.5px;
+            }
+
+            .gallery-card-text p {
+                font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+                color: rgba(255, 255, 255, 0.75);
+                line-height: 1.5;
+                margin: 0;
+            }
+
+            .gallery-item:hover .gallery-card-text {
+                background: linear-gradient(135deg, rgba(15, 23, 42, 1) 0%, rgba(30, 41, 59, 1) 100%);
+                border-top-color: rgba(59, 130, 246, 0.5);
             }
 
             @media (max-width: 768px) {
-                .gallery-item {
+                .gallery-card {
                     height: 200px;
                 }
 
-                .gallery-overlay h3 {
-                    font-size: 1.2rem;
+                .gallery-card h3 {
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                }
+
+                .gallery-card p {
+                    font-size: 0.85rem;
+                }
+
+                .gallery-card-text {
+                    padding: 16px 12px;
+                }
+
+                .gallery-card-text h3 {
+                    font-size: 1rem;
+                    margin-bottom: 6px;
+                }
+
+                .gallery-card-text p {
+                    font-size: 0.8rem;
                 }
             }
         </style>
